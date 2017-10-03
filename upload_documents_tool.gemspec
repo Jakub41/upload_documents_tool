@@ -32,6 +32,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency("railties", "~> 4.2.6")
+  spec.add_dependency("jquery-rails")
+  spec.add_dependency("kaminari", "~> 1.0.1")
+  spec.add_dependency("bootstrap-kaminari-views", "~> 0.0.5")
+  spec.add_dependency("bootstrap-sass")
+  spec.add_dependency("jasny-bootstrap-rails")
+  spec.add_dependency("font-awesome-sass")
+  spec.add_dependency("toastr-rails")
   spec.add_development_dependency "bundler", "~> 1.16.a"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"

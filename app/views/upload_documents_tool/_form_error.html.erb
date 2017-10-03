@@ -1,0 +1,7 @@
+<% unless resource.errors.empty? %>
+    <script>
+        <% resource.errors.each do |k, msg| %>
+        toastr['error']('<%= msg %>');
+        <% end %>
+    </script>
+<% end %>

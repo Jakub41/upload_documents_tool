@@ -1,0 +1,40 @@
+<table class="table table-striped table-hover">
+  <div class="pull-left">
+    <%= form_tag controller_name, method: :get, id: 'limit_form' do %>
+        <div class="select-tag">
+          Show <%= select_tag :limit, options_for_select([5, 10, 15, 20], selected: params[:limit] || 10), onchange: "$('#limit_form').submit();" %> documents per page
+        </div>
+    <% end %>
+  </div>
+  <thead>
+  <tr>
+    <th>#</th>
+    <th><%= sortable "filename", "File Name"%></th>
+    <th><%= sortable "content_type", "Extension"%></th>
+    <th><%= sortable "created_at", "Date"%></th>
+    <th>Download</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% documents.each_with_index do |document, idx| %>
+      <tr>
+        <th scope="row"><%= idx + 1 %></th>
+        <td><%= link_to document.filename, document, method: :get %></td>
+        <td><%= document.content_type %></td>
+        <th><%= document.created_at.strftime('%Y/%m/%d %H:%M') %></th>
+        <th><%= link_to document, method: :get, class: 'btn btn-primary' do %><i class="fa fa-download"></i><% end %></th>
+        <th><%= link_to document, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } do %>
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+          <% end %></th>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<div class="row">
+  <div class="col-md-6">
+    <div class="">
+      <%= paginate documents, theme: 'twitter-bootstrap-3' %>
+    </div>
+  </div>
+</div>
