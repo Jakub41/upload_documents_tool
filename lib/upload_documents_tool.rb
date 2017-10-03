@@ -16,7 +16,7 @@ module UploadDocumentsTool
   end
 
   def upload_local
-    path = "#{Rails.root}/public/uploads/document"
+    path = "#{Rails.root}/public/uploads/documents"
     FileUtils.mkdir_p(path) unless File.exists?(path)
     FileUtils.copy(@file.tempfile, path)
   end
