@@ -7,10 +7,10 @@ module UploadDocumentToolHelper
   end
 
   def documents_table(documents)
-    render 'upload_document_tool/documents', documents: documents
+    render 'upload_documents_tool/documents', documents: documents
   end
 
   def document_form(document)
-    render 'upload_document_tool/form', document: document
+    render 'upload_documents_tool/form', document: document
   end
 end
