@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{This tool is an easy way to upload documents of different kind.
                        The package has partials which thanks to a helper, make easier to implement and set inside other application.
                         Is posible then to set the partials views where desired.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/Jakub41/upload_documents_tool"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
