@@ -1,8 +1,14 @@
 # UploadDocumentsTool
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/upload_documents_tool`. To experiment with that code, run `bin/console` for an interactive prompt.
+This Gem provides a tool which can be integrated easaly in a panel/dashboard of any kind. 
+It is providing essentially three partial views which can be implemented anywhere in an app where this Gem is imported. The implementation is easy due the helper method made especially for render the views.
+The tool provides this three views:
 
-TODO: Delete this and the text above, and describe your gem
+	- _documents.html.erb.  // This is the table showing all he documents
+	- _form.html.erb        // This is the upload form for upload the documents
+	- _form_error.html.erb  // This is the form error for show erros in the form by a message  
+
+The tool autogenerate during the first upload a new folder under uploads called documents. Here all documents are stored.
 
 ## Installation
 
@@ -10,6 +16,11 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'upload_documents_tool'
+```
+Or for local enviroment
+
+```ruby
+gem 'uploade_document_tool', path: "<pathToTheGem>/uploade_document_tool"
 ```
 
 And then execute:
@@ -22,7 +33,76 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To be able to use the Gem in the correct way we need the next dependencies:
+
+- ["railties", "~> 4.2.6"](https://github.com/rails/rails/tree/master/railties)
+- ["jquery-rails"](https://github.com/rails/jquery-rails)
+- ["kaminari", "~> 1.0.1"](https://github.com/kaminari/kaminari)
+- ["bootstrap-kaminari-views", "~> 0.0.5"](https://github.com/matenia/bootstrap-kaminari-views)
+- ["bootstrap-sass"](https://github.com/twbs/bootstrap-sass)
+- ["jasny-bootstrap-rails"](http://www.jasny.net/bootstrap/)
+- ["font-awesome-sass"](https://github.com/FortAwesome/font-awesome-sass)
+- ["toastr-rails"](https://github.com/tylergannon/toastr-rails)
+
+After the Gem was succesfully installed in your system, you need to set up a table in your database where to store the uploaded documents. You can do that under the folder `./db/migrate/` and in your migration file you can add like next(Your migration file should be similar with different name and less fields):
+
+```ruby
+class CreateDocuments < ActiveRecord::Migration
+  def change
+    create_table :documents do |t|
+      t.string :filename
+      t.string :content_type
+      t.binary :file_contents
+
+      t.timestamps null: false
+    end
+  end
+end
+```
+
+Then run migration:
+
+```
+rake db:migrate
+```
+
+To be able to use the functionality of the Gem you need tu use the next implementation in your controller using this `@documents = ...` this calls the Gem:
+
+```ruby
+def index
+    @documents = Document.order(sort_column + " " + sort_direction).page(params[:page]).per(params[:limit])
+  end
+```
+
+In this example we are setting up in the Index the table of all documents providing the sort, pagination and item per page to show.
+
+For the validation checking we need to import in to a model the functionality of the tool.
+We can do like the next model example:
+
+```ruby
+class Document < ActiveRecord::Base
+  include UploadDocumentsTool
+  validate :document_file_format
+  before_save :upload_local
+  validates_uniqueness_of :filename, message: "File exist"
+end
+```
+
+The [helper method](https://github.com/Jakub41/upload_documents_tool/blob/master/app/helpers/upload_document_tool_helper.rb) inside the Gem provide an easy way to render the partials inside a prefered view.
+ 
+Table of all documents:
+
+```ruby
+<%= documents_table @documents %>
+```
+
+Upload form:
+
+```ruby
+<%= document_form @document %>
+```
+ 
+
 
 ## Development
 
