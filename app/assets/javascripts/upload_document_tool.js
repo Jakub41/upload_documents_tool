@@ -1,2 +1,2 @@
 //= require progress_bar
-//= require documents
+//= require documents_gem
