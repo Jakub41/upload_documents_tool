@@ -20,7 +20,7 @@ gem 'upload_documents_tool'
 Or for local enviroment
 
 ```ruby
-gem 'uploade_document_tool', path: "<pathToTheGem>/uploade_document_tool"
+gem 'uploade_documents_tool', path: "<pathToTheGem>/uploade_document_tool"
 ```
 
 And then execute:
