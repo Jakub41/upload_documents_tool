@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df46d33f-74ef-431f-8aed-cd7454e07a46" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/down_arrow.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/up_arrow.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/upload_document_tool.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/upload_document_tool.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/upload_documents_tool/version.rb" afterPath="$PROJECT_DIR$/lib/upload_documents_tool/version.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,17 +85,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload_document_tool.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="upload_document_tool.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/upload_document_tool.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            <state relative-caret-position="456">
+              <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="version.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/upload_documents_tool/version.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
@@ -152,8 +148,8 @@
         <option value="$PROJECT_DIR$/app/views/upload_documents_tool/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/document.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/upload_document_tool.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/upload_document_tool.scss" />
         <option value="$PROJECT_DIR$/lib/upload_documents_tool/version.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/upload_document_tool.scss" />
       </list>
     </option>
   </component>
@@ -298,12 +294,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1507017759027</updated>
-      <workItem from="1507017760194" duration="14729000" />
+      <workItem from="1507017760194" duration="15063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14729000" />
+    <option name="totallyTimeSpent" value="15063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="22" width="1920" height="1054" extended-state="0" />
@@ -464,6 +460,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/upload_documents_tool/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/upload_document_tool.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -476,16 +480,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/upload_document_tool.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/upload_documents_tool/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        <state relative-caret-position="456">
+          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding />
         </state>
       </provider>
