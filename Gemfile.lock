@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    upload_documents_tool (0.1.5)
+    upload_documents_tool (0.1.6)
       bootstrap-kaminari-views (~> 0.0.5)
       bootstrap-sass
       font-awesome-sass
