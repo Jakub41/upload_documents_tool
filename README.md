@@ -101,8 +101,15 @@ Upload form:
 ```ruby
 <%= document_form @document %>
 ```
- 
 
+The tool provide a column in the table with the date/time of the added document. However, be aware there is no time conversion the time is in UTC format. If you need to diplay your local time go to the file `config/application.rb` inside the file set your time zone like the example:
+	
+	# Time zone
+    config.time_zone = 'Copenhagen'  // Change this to your time zone
+
+Along this Gem is also provided a test application where to see the functionality in act: 
+
+[UploadGemTest](https://github.com/Jakub41/UploadGemTest)
 
 ## Development
 
